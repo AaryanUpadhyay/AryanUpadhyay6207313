@@ -12,7 +12,7 @@ projects/
   portfolio/portfolio/     # Portfolio practice project
   dotnet/WebApplication/   # ASP.NET Core MVC application
 ```
-Tech Stack
+Tech Stack :- 
 HTML5
 CSS3
 JavaScript
