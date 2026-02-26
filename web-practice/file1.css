@@ -1,0 +1,54 @@
+body{
+    background-image: url('./download.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.h1{
+    border: 2px solid white;
+    color: gold;
+    margin: auto;
+    float: center;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.box1{
+    color: turquoise;
+    border: 2px solid crimson;
+    width: 350px;
+    height: auto;
+    /* margin: auto; */
+    padding: 40px;
+    text-align: center;
+    /* position: relative; */
+    left: 100%;
+    top: 0px;
+}
+h2{
+    background-color: aliceblue;
+    color: blue;
+}
+body div div h1{
+    background-color: rgb(44, 18, 91);
+}
+body>#div1{
+    border: 2px solid white;
+    color: rgb(181, 21, 53);
+}
+a{
+    color: burlywood;
+    font-size: larger;
+    margin-bottom: 50px;
+    text-align: center;
+}
+a:hover{
+    color: white;
+}
+img{
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    float: right;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart - Shop Categories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">NovaCart</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="shoes.html">Shoes</a>
+        <a class="nav-link" href="clothes.html">Clothes</a>
+        <a class="nav-link" href="mobiles.html">Mobiles</a>
+      </div>
+      <div class="nav-right">
+        <button id="cartButton" class="cart-btn" aria-label="Open cart">
+          Cart <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="home-hero">
+      <div class="home-hero-copy">
+        <p class="home-kicker">Limited Time Deals</p>
+        <h1>Upgrade your style and tech in one place.</h1>
+        <p class="home-subtitle">Pick your favorite category and build your cart across pages with a smooth shopping flow.</p>
+        <div class="home-cta-row">
+          <a class="home-cta primary" href="shoes.html">Shop Shoes</a>
+          <a class="home-cta ghost" href="mobiles.html">Explore Mobiles</a>
+        </div>
+        <div class="home-metrics">
+          <div><strong>18+</strong><span>Products</span></div>
+          <div><strong>3</strong><span>Categories</span></div>
+          <div><strong>24h</strong><span>Fast Support</span></div>
+        </div>
+      </div>
+      <div class="home-hero-visual">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Modern shopping desk setup" />
+      </div>
+    </section>
+
+    <section class="home-banner">
+      <p>New user offer: get an extra <strong>10% off</strong> on your first order. Use code: <strong>NOVA10</strong></p>
+    </section>
+
+    <section class="page-intro">
+      <h2>Shop by Category</h2>
+      <p>Browse dedicated pages for shoes, clothes, and mobiles with six products each.</p>
+    </section>
+
+    <section class="category-grid" aria-label="Shop categories">
+      <a class="category-card" href="shoes.html">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Shoes category" />
+        <div>
+          <h3>Shoes</h3>
+          <p>Performance and lifestyle sneakers.</p>
+        </div>
+      </a>
+
+      <a class="category-card" href="clothes.html">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Clothes category" />
+        <div>
+          <h3>Clothes</h3>
+          <p>Smart essentials for everyday wear.</p>
+        </div>
+      </a>
+
+      <a class="category-card" href="mobiles.html">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Mobiles category" />
+        <div>
+          <h3>Mobiles</h3>
+          <p>Latest smartphones and flagship picks.</p>
+        </div>
+      </a>
+    </section>
+
+    <section class="home-feature-row" aria-label="Store highlights">
+      <article class="home-feature">
+        <h3>Curated Picks</h3>
+        <p>Every product page includes handpicked options instead of generic placeholders.</p>
+      </article>
+      <article class="home-feature">
+        <h3>Persistent Cart</h3>
+        <p>Your cart stays synced as you switch between shoes, clothes, and mobiles.</p>
+      </article>
+      <article class="home-feature">
+        <h3>Responsive Layout</h3>
+        <p>Clean and fast shopping experience on desktop, tablet, and mobile devices.</p>
+      </article>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart">
+    <div class="cart-panel-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="close-btn" aria-label="Close cart">x</button>
+    </div>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">Rs. 0</strong>
+    </div>
+  </aside>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

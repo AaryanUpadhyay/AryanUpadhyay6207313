@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart - Mobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">NovaCart</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="shoes.html">Shoes</a>
+        <a class="nav-link" href="clothes.html">Clothes</a>
+        <a class="nav-link active" href="mobiles.html">Mobiles</a>
+      </div>
+      <div class="nav-right">
+        <button id="cartButton" class="cart-btn" aria-label="Open cart">Cart <span id="cartCount" class="cart-count">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Mobiles Collection</h1>
+      <p>6 smartphones from budget to flagship range.</p>
+    </section>
+
+    <section class="products" aria-label="Mobiles products">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Flagship smartphone" />
+          <div class="product-body"><h3>Infinix X1</h3><p>Flagship camera and ultra smooth display.</p><div class="product-footer"><span class="price">Rs. 999</span><button class="add-btn" data-id="mob-1" data-name="Nova X1" data-price="999">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=900&q=80" alt="Silver smartphone" />
+          <div class="product-body"><h3>Lava Blaze Pro</h3><p>Powerful performance with long battery life.</p><div class="product-footer"><span class="price">Rs. 849</span><button class="add-btn" data-id="mob-2" data-name="Pulse Pro" data-price="849">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=900&q=80" alt="Blue mobile phone" />
+          <div class="product-body"><h3>Iphone 13 5G</h3><p>Balanced 5G phone for daily productivity.</p><div class="product-footer"><span class="price">Rs. 699</span><button class="add-btn" data-id="mob-3" data-name="Zen 5G" data-price="699">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80" alt="Compact smartphone" />
+          <div class="product-body"><h3>Google Pixel Air</h3><p>Compact design with premium build quality.</p><div class="product-footer"><span class="price">Rs. 599</span><button class="add-btn" data-id="mob-4" data-name="Pixel Air" data-price="599">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=900&q=80" alt="Budget smartphone" />
+          <div class="product-body"><h3>Poco Lite</h3><p>Affordable phone with fast charging.</p><div class="product-footer"><span class="price">Rs. 399</span><button class="add-btn" data-id="mob-5" data-name="Poco Lite" data-price="399">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=900&q=80" alt="Premium smartphone" />
+          <div class="product-body"><h3>Iphone 16 Pro Ultra</h3><p>Top-tier specs and immersive OLED panel.</p><div class="product-footer"><span class="price">Rs. 1099</span><button class="add-btn" data-id="mob-6" data-name="Edge Ultra" data-price="1099">Add to Cart</button></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart">
+    <div class="cart-panel-header"><h2>Your Cart</h2><button id="closeCart" class="close-btn" aria-label="Close cart">x</button></div>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+  </aside>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

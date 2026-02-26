@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart - Clothes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">NovaCart</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="shoes.html">Shoes</a>
+        <a class="nav-link active" href="clothes.html">Clothes</a>
+        <a class="nav-link" href="mobiles.html">Mobiles</a>
+      </div>
+      <div class="nav-right">
+        <button id="cartButton" class="cart-btn" aria-label="Open cart">Cart <span id="cartCount" class="cart-count">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Clothes Collection</h1>
+      <p>6 modern outfits picked for comfort and style.</p>
+    </section>
+
+    <section class="products" aria-label="Clothes products">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Cotton t shirt" />
+          <div class="product-body"><h3>Puma - White Core Tee</h3><p>Soft cotton t-shirt in classic fit.</p><div class="product-footer"><span class="price">Rs. 29</span><button class="add-btn" data-id="cloth-1" data-name="Core Tee" data-price="29">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=80" alt="Denim jacket" />
+          <div class="product-body"><h3>Blueberry Suit - Navy Blue</h3><p>Classic blue suit with modern cut.</p><div class="product-footer"><span class="price">Rs. 79</span><button class="add-btn" data-id="cloth-2" data-name="Denim Jacket" data-price="79">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80" alt="Black hoodie" />
+          <div class="product-body"><h3>Urban Oversized Tees</h3><p>Cozy fleece oversized tees for every season.</p><div class="product-footer"><span class="price">Rs. 59</span><button class="add-btn" data-id="cloth-3" data-name="Urban Hoodie" data-price="59">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80" alt="Slim fit shirt" />
+          <div class="product-body"><h3>Formal Trouser</h3><p>Wrinkle-resistant trouser for office wear.</p><div class="product-footer"><span class="price">Rs. 49</span><button class="add-btn" data-id="cloth-4" data-name="Formal Shirt" data-price="49">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=900&q=80" alt="Casual joggers" />
+          <div class="product-body"><h3>Flex Joggers</h3><p>Stretch fabric joggers with tapered fit.</p><div class="product-footer"><span class="price">Rs. 44</span><button class="add-btn" data-id="cloth-5" data-name="Flex Joggers" data-price="44">Add to Cart</button></div></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=900&q=80" alt="Winter coat" />
+          <div class="product-body"><h3>North Tees</h3><p>Warm outerwear tees  with sleek silhouette.</p><div class="product-footer"><span class="price">Rs. 119</span><button class="add-btn" data-id="cloth-6" data-name="North Coat" data-price="119">Add to Cart</button></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart">
+    <div class="cart-panel-header"><h2>Your Cart</h2><button id="closeCart" class="close-btn" aria-label="Close cart">x</button></div>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+  </aside>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

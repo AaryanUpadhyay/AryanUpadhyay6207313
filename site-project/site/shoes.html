@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart - Shoes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand">NovaCart</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a class="nav-link active" href="shoes.html">Shoes</a>
+        <a class="nav-link" href="clothes.html">Clothes</a>
+        <a class="nav-link" href="mobiles.html">Mobiles</a>
+      </div>
+      <div class="nav-right">
+        <button id="cartButton" class="cart-btn" aria-label="Open cart">Cart <span id="cartCount" class="cart-count">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Shoes Collection</h1>
+      <p>6 curated shoes with premium comfort and style.</p>
+    </section>
+
+    <section class="products" aria-label="Shoes products">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Red sprint shoes" />
+          <div class="product-body">
+            <h3>Nike Velocity Runner</h3>
+            <p>Breathable daily running shoes.</p>
+            <div class="product-footer"><span class="price">Rs. 129</span><button class="add-btn" data-id="shoe-1" data-name="Velocity Runner" data-price="129">Add to Cart</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?auto=format&fit=crop&w=900&q=80" alt="White street sneakers" />
+          <div class="product-body">
+            <h3>Converse Urban Street</h3>
+            <p>Minimal sneakers for casual outfits.</p>
+            <div class="product-footer"><span class="price">Rs. 109</span><button class="add-btn" data-id="shoe-2" data-name="Urban Street" data-price="109">Add to Cart</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80" alt="Sport trainers" />
+          <div class="product-body">
+            <h3>Old Skool Aero Trainer</h3>
+            <p>Lightweight pair for active sessions.</p>
+            <div class="product-footer"><span class="price">Rs. 139</span><button class="add-btn" data-id="shoe-3" data-name="Aero Trainer" data-price="139">Add to Cart</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1576672843344-f01907a9d40c?auto=format&fit=crop&w=900&q=80" alt="Classic canvas shoes" />
+          <div class="product-body">
+            <h3>Nike Canvas Classic</h3>
+            <p>Timeless design with all-day comfort.</p>
+            <div class="product-footer"><span class="price">Rs. 89</span><button class="add-btn" data-id="shoe-4" data-name="Canvas Classic" data-price="89">Add to Cart</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80" alt="Black high top shoes" />
+          <div class="product-body">
+            <h3>Colourblock Summit High</h3>
+            <p>High-top support for a bold look.</p>
+            <div class="product-footer"><span class="price">Rs. 149</span><button class="add-btn" data-id="shoe-5" data-name="Summit High" data-price="149">Add to Cart</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80" alt="Trail shoes" />
+          <div class="product-body">
+            <h3>Nike Trail Edge</h3>
+            <p>Rugged sole made for outdoor routes.</p>
+            <div class="product-footer"><span class="price">Rs. 159</span><button class="add-btn" data-id="shoe-6" data-name="Trail Edge" data-price="159">Add to Cart</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart">
+    <div class="cart-panel-header"><h2>Your Cart</h2><button id="closeCart" class="close-btn" aria-label="Close cart">x</button></div>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+  </aside>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
