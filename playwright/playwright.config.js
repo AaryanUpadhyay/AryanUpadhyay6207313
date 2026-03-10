@@ -34,8 +34,9 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    testIdAttribute: "data-test",
+    // testIdAttribute: "data-test",
     actionTimeout: 8000,
+    testIdAttribute: "data-csa-c-content-id",
   },
 
   /* Configure projects for major browsers */

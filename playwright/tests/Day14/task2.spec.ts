@@ -1,4 +1,5 @@
 import {test, expect} from "@playwright/test"
+test.use({actionTimeout: 5000})
 
 test("assertions", async ({page})=>{
     await page.setDefaultTimeout(5000)
