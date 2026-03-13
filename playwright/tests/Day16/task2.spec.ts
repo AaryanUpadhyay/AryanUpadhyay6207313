@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import path from "path"
 
 test("multiple tabs", async ({ browser }) => {
     let context = await browser.newContext();
@@ -58,9 +59,15 @@ test("multiple tabs", async ({ browser }) => {
     await page.goto('https://demoapps.qspiders.com/ui/download?sublist=0')
     await page.getByPlaceholder('Enter text here').fill("Hello this is a sample text file");
     await page.getByPlaceholder('Filename').fill("sample.txt");
-    let [download] = await Promise.all([
+    let [downloadfile] = await Promise.all([
         page.waitForEvent('download'),
         page.locator('#downloadButton').click()
     ])
+
+    let downloadfolder = "C:/Users/Aryan Upadhyay/OneDrive/Desktop/projects/playwright/download"
+    let filename = await downloadfile.suggestedFilename()
+    // await downloadfile.suggestedFilename()
+    console.log(filename)
+    await downloadfile.saveAs(path.join(downloadfolder,filename))
     await page.waitForTimeout(5000);
 })
