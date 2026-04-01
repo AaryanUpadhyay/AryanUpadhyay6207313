@@ -33,16 +33,21 @@ test("multiple tabs", async ({ browser }) => {
     // console.log(page);
     // console.log(page2);
 
-    // await page.goto('https://demoapps.qspiders.com/ui/browser/newTab?sublist=1')
+    await page.goto('https://demoapps.qspiders.com/ui/browser/newTab?sublist=1')
     // let [page2] = await Promise.all([
     //     page.waitForEvent('popup'),
     //     page.getByText('view more').first().click()
     // ]);
-    // await page2.waitForLoadState();
-    // console.log(await page2.url());
-    // console.log(await page.url());
-    // console.log(page);
-    // console.log(page2);
+    const popupPromise = page.waitForEvent('popup');
+await page.getByText('view more').first().click();
+const p
+age2 = await popupPromise;
+
+    await page2.waitForLoadState();
+    console.log(await page2.url());
+    console.log(await page.url());
+    console.log(page);
+    console.log(page2);
 
 
     // await page.goto('https://demoapps.qspiders.com/ui/browser?sublist=0')
@@ -56,18 +61,18 @@ test("multiple tabs", async ({ browser }) => {
     // console.log(page);
     // console.log(page2);
 
-    await page.goto('https://demoapps.qspiders.com/ui/download?sublist=0')
-    await page.getByPlaceholder('Enter text here').fill("Hello this is a sample text file");
-    await page.getByPlaceholder('Filename').fill("sample.txt");
-    let [downloadfile] = await Promise.all([
-        page.waitForEvent('download'),
-        page.locator('#downloadButton').click()
-    ])
+    // await page.goto('https://demoapps.qspiders.com/ui/download?sublist=0')
+    // await page.getByPlaceholder('Enter text here').fill("Hello this is a sample text file");
+    // await page.getByPlaceholder('Filename').fill("sample.txt");
+    // let [downloadfile] = await Promise.all([
+    //     page.waitForEvent('download'),
+    //     page.locator('#downloadButton').click()
+    // ])
 
-    let downloadfolder = "C:/Users/Aryan Upadhyay/OneDrive/Desktop/projects/playwright/download"
-    let filename = await downloadfile.suggestedFilename()
+    // let downloadfolder = "C:/Users/Aryan Upadhyay/OneDrive/Desktop/projects/playwright/download"
+    // let filename = await downloadfile.suggestedFilename()
     // await downloadfile.suggestedFilename()
-    console.log(filename)
-    await downloadfile.saveAs(path.join(downloadfolder,filename))
-    await page.waitForTimeout(5000);
+    // console.log(filename)
+    // await downloadfile.saveAs(path.join(downloadfolder,filename))
+    // await page.waitForTimeout(5000);
 })
