@@ -4,17 +4,21 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
-                bat 'npx playwright install'
+                dir('playwright') {
+                    bat 'npm install'
+                    bat 'npx playwright install'
+                }
             }
         }
 
         stage('Run Tests') {
             steps {
-                script {
-                    def status = bat(script: 'npx playwright test', returnStatus: true)
-                    if (status != 0) {
-                        echo "Tests failed, but continuing to generate reports..."
+                dir('playwright') {
+                    script {
+                        def status = bat(script: 'npx playwright test', returnStatus: true)
+                        if (status != 0) {
+                            echo "Tests failed, but continuing to generate reports..."
+                        }
                     }
                 }
             }
@@ -25,19 +29,14 @@ pipeline {
         always {
             echo 'Generating HTML reports...'
 
-
             publishHTML(target: [
-                reportDir: 'playwright-report',
+                reportDir: 'playwright/playwright-report',
                 reportFiles: 'index.html',
                 reportName: 'Playwright HTML Report',
-                alwaysLinkToLastBuild: true,
                 keepAll: true,
-                 alwaysLinkToLastBuild: true,
-                allowMissing: true,
-                linkRelative: false
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
             ])
-
-        
         }
     }
 }
